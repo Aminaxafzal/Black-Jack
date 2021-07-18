@@ -1,37 +1,23 @@
-
-// 1. Create two variables, firstCard and secondCard. 
-// Set their values to a random number between 2-11 // 
-// 2. Create a variable, sum, and set it to the sum of the two cards 
-
-
-
-
-
-let age = 2;
-
-if (age < 21) {
-    console.log("You are not old enough to join")
-} else {
-    console.log("Welcome to our club, good Luck!")
-}
-
-
-
-
-let firstCard = 11
-let secondCard = 10
+let firstCard = 10
+let secondCard = 4
 let sum = firstCard + secondCard
+let hasBlackJack = false
+let isAlive = true
+let message = ""
 
+// 2. Create a startGame() function. Move the conditional
+// below (line 11-20) inside the body of the function.
 
-
-if (sum <= 20) {
-    console.log("Do you want to draw a new card? 🙂")
+function startGame() {
+    if (sum <= 20) {
+    message = "Do you want to draw a new card? 🙂"
 } else if (sum === 21) {
-    console.log("Wohoo! You've got Blackjack! 🥳")
+    message = "Wohoo! You've got Blackjack! 🥳"
+    hasBlackJack = true
 } else {
-    console.log("You're out of the game! 😭")
+    message = "You're out of the game! 😭"
+    isAlive = false
 }
-
-
-
+console.log(message)
+}
 
